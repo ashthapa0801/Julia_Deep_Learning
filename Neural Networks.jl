@@ -30,13 +30,8 @@ xs = vcat(x_apples, x_bananas, x_grapes)
 ys = vcat(fill([1,0,0], size(x_apples)),
           fill([0,1,0], size(x_bananas)),
           fill([0,0,1], size(x_grapes)))
-# ### One-hot vectors
-# Recall:
-#
-# <img src="https://raw.githubusercontent.com/JuliaComputing/JuliaAcademyData.jl/master/courses/Deep%20learning%20with%20Flux/data/fruit-salad.png" alt="Drawing" style="width: 300px;"/>
-# `Flux.jl` provides an efficient representation for one-hot vectors, using advanced features of Julia so that it does not actually store these vectors, which would be a waste of memory; instead `Flux` just records in which position the non-zero element is. To us, however, it looks like all the information is being stored:
-# Code from: Julia Academy
 
+# ### One-hot vectors
 using Flux: onehot
 
 onehot(2, 1:3)
